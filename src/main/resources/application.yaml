@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: spring-boot-postgres-app
+  datasource:
+    url: jdbc:postgresql://localhost:5432/testdb
+    username: admin
+    password: secret123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info
