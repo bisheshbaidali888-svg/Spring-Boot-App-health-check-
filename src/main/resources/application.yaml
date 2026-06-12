@@ -3,8 +3,8 @@ spring:
     name: spring-boot-postgres-app
   datasource:
     url: jdbc:postgresql://localhost:5432/testdb
-    username: admin
-    password: secret123
+    username: ${DB_USERNAME:admin}
+    password: ${DB_PASSWORD:secret123}
   jpa:
     hibernate:
       ddl-auto: update
